@@ -1,0 +1,11 @@
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading"><%= nearby_deal.full_title %></h2>
+    <p class="lead"><%= truncate nearby_deal.description, length: 200 %></p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-responsive" style="width:500px;height:500px" src="<%= nearby_deal.image_url %>" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">

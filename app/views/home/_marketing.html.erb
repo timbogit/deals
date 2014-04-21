@@ -14,41 +14,8 @@
   <!-- START THE FEATURETTES -->
 
   <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive" style="width:500px;height:500px" src="https://a0.lscdn.net/imgs/b286fd13-c9b0-4c66-90f7-3c20aaa22f9d/540_q80.jpg" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive" style="width:500px;height:500px" src="https://a1.lscdn.net/imgs/5c161267-3fd7-4146-b8da-03e810029f80/540_q80.jpg" alt="Generic placeholder image">
-    </div>
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive" style="width:500px;height:500px" src="https://a0.lscdn.net/imgs/168a2f0b-1663-4c75-af1d-6c8dc5592d6a/540_q80.jpg" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
+    <% nearby_deals.each do |deal| %>
+      <%= render "nearby_deal", nearby_deal: deal %>
+    <% end %>
 
   <!-- /END THE FEATURETTES -->
