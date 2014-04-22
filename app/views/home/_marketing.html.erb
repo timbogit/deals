@@ -6,6 +6,9 @@
 
   <!-- Three columns of text below the carousel -->
   <div class="row">
+
+<!--     <h1>Top Deals <small>in your city</small></h1> -->
+
     <% top_deals.each do |deal| %>
       <%= render "top_deal", top_deal: deal %>
     <% end %>
@@ -14,8 +17,11 @@
   <!-- START THE FEATURETTES -->
 
   <hr class="featurette-divider">
-    <% nearby_deals.each do |deal| %>
-      <%= render "nearby_deal", nearby_deal: deal %>
-    <% end %>
+
+<!--   <h1>Nearby Deals <small>close to your city</small></h1> -->
+
+  <% nearby_deals.each do |deal| %>
+    <%= render "nearby_deal", nearby_deal: deal %>
+  <% end %>
 
   <!-- /END THE FEATURETTES -->
