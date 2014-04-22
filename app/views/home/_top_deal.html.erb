@@ -1,6 +1,6 @@
 <div class="col-lg-4">
-  <img class="img-circle" style="width:140px;height:140px" src="<%= top_deal.image_url %>" alt="Generic placeholder image">
+  <img class="img-circle" style="width:140px;height:140px" src="<%= top_deal.image_url %>" alt="<%= top_deal.short_title %>">
   <h2><%= top_deal.full_title %></h2>
   <p><%= truncate top_deal.description, length: 150 %></p
-  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+  <p><a class="btn btn-default" href="<%= deal_path(top_deal.id) %>" role="button">View details &raquo;</a></p>
 </div><!-- /.col-lg-4 -->

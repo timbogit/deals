@@ -11,6 +11,11 @@ class RemoteInventory
       @api_version ||= '1'
     end
 
+    def find_by_id(id)
+      raise "RemoteInventory.host needs to be set" unless host
+      Hashie::Mash.new JSON.parse(Typhoeus.get("#{host}/api/v#{api_version}/inventory_items/#{id}.json").body)
+    end
+
     def find_by_city_id(city_id, limit: 3)
       raise "RemoteInventory.host needs to be set" unless host
       JSON.parse(Typhoeus.get("#{host}/api/v#{api_version}/inventory_items/in_city/#{city_id}.json?limit=#{limit}").body).map do |item|

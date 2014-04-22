@@ -1,0 +1,35 @@
+<div class="container deal" style="">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <h1><%= @deal.full_title %></h1>
+
+    <div class="col-lg-4">
+      <img class="featurette-image img-responsive" style="width:400px" src="<%= @deal.image_url %>" alt="<%= @deal.short_title %>">
+    </div>
+
+    <div class="col-lg-4">
+      <blockquote>
+        <p><%= @deal.description %></p>
+      </blockquote>
+    </div>
+
+    <div class="col-lg-4 center-block">
+      <span class="price"><%= @deal.usd %></span>
+      <p>
+        <button type="button" class="btn btn-primary btn-lg" disabled="disabled">Buy Now!</button>
+      </p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="row">
+    <h2>Nearby Deals <small>deals close to you</small></h2>
+
+    <% top_deals.each do |deal| %>
+      <%= render "home/top_deal", top_deal: deal %>
+    <% end %>
+  </div>
+
+  <hr/>
