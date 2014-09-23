@@ -27,3 +27,4 @@ gem 'spring',        group: :development
 
 gem 'hashie'
 gem 'typhoeus'
+gem 'foreman', group: :development
